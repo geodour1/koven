@@ -17,25 +17,27 @@ db_connector = DBConnector()
 # initialize controllers
 user_controller = UserController(db_connector)
 
+
 @app.route("/", methods=['GET'])
 def index():
     return render_template(
         'index.html'
     )
 
-### USERS
+# USERS
 @app.route("/users", methods=['GET'])
 def users():
     return user_controller.get_users(request)
+
 
 @app.route("/user", methods=['GET', 'POST'])
 def user_add():
     return user_controller.add_user(request)
 
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+# @app.route('/favicon.ico')
+# def favicon():
+#     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 # run application
