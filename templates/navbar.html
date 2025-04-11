@@ -1,0 +1,48 @@
+<!-- Navbar -->
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <strong>KOVEN</strong>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-chalkboard"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </span>
+            </a>
+            <a class="navbar-item" href="/users">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="fas fa-users"></i>
+                    </span>
+                    <span>Manage Users</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Navbar burger script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const burger = document.querySelector('.navbar-burger');
+        const menu = document.getElementById('navMenu');
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('is-active');
+            menu.classList.toggle('is-active');
+        });
+    });
+</script>

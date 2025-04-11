@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+{% include "navbar.html" %}
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Home Page</h1>
+        <p>This page includes the navbar and footer directly.</p>
+    </div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}
